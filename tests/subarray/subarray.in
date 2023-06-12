@@ -1,0 +1,23 @@
+{ This program does more stuff with subarrays }
+program arr;
+
+var arr : array [1 .. 10] of real;
+
+procedure some (rra : array [5 .. 10] of real);
+begin
+    rra[6] := 4
+end;
+
+procedure some2 (var rra : array [5 .. 10] of real; var x : real);
+begin
+    rra[6] := 4;
+    x := 3
+end;
+
+begin
+    arr[3] := 3;
+    some(arr[2 .. 7]);
+    writeln(arr[3]);
+    some2(arr[2 .. 7], arr[4]);
+    writeln(arr[3], arr[4])
+end.

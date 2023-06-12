@@ -1,0 +1,14 @@
+{ Parameter passing mechanism from the lab pdf }
+PROGRAM parmechanism;
+VAR a, b : integer;
+
+PROCEDURE proc(VAR a:integer; b, c : integer);
+BEGIN b := b + 2
+; a := c*a + b
+END;
+
+BEGIN readln(a)
+; b := 0
+; proc(a,b,2)
+; writeln(a,b)
+END.

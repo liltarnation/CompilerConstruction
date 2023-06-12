@@ -1,0 +1,18 @@
+{ This program does a lot of shadowing }
+PROGRAM shadowing;
+
+function x (a : integer) : integer;
+begin
+    x := a
+end;
+
+function a (b : integer) : integer;
+var x : integer;
+begin
+    x := b;
+    a := x
+end;
+
+begin
+    writeln(a(x(4)))
+end.

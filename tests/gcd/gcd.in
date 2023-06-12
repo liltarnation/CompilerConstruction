@@ -1,0 +1,41 @@
+{ This program computes the greatest common divisor in three different ways }
+PROGRAM euclid;
+
+VAR a,b : integer;
+
+function gcd_euclid(a, b : integer) : integer;
+begin
+  while a <> b do
+  begin
+    while a > b do a := a - b;
+    while b > a do b := b - a
+  end;
+  gcd_euclid := a
+end;
+
+FUNCTION gcd_recursive(u, v : integer) : integer;
+BEGIN
+  IF u mod v <> 0 THEN
+    gcd_recursive := gcd_recursive(v, u mod v)
+  ELSE
+    gcd_recursive := v
+END;
+
+function gcd_iterative(u, v : integer) : integer;
+var t : integer;
+begin
+  while v <> 0 do
+  begin
+    t := u;
+    u := v;
+    v := t mod v
+  end;
+  gcd_iterative := u
+end;
+
+BEGIN
+  readln(a,b);
+  writeln(gcd_recursive(a,b));
+  writeln(gcd_iterative(a,b));
+  writeln(gcd_euclid(a,b))
+END.

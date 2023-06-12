@@ -1,0 +1,27 @@
+{ This program determines whether a number is prime }
+PROGRAM prime;
+
+VAR p,c : integer;
+
+BEGIN
+	readln(p);
+	c := 2;
+	while c * c <= p do
+	begin
+		if p mod c <> 0 then
+		begin
+			c := c + 1;
+			if c * c > p then
+				writeln(1)
+			else
+			begin
+			end
+		end
+		else
+		begin
+			writeln(0);
+			c := p + 100 { Exit condition that also works for p = 1 }
+		end
+	end
+END
+.

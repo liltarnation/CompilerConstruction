@@ -1,0 +1,19 @@
+{ Return 42 example from lab pdf }
+program return42;
+
+var x : integer;
+
+function return42(n : integer) : integer;
+begin
+    if n > 42 then
+        return42 := return42(n-1)
+    else begin
+        return42 := n;
+        while return42 < 42 do return42 := return42 + 1
+    end
+end;
+
+begin
+    readln(x);
+    writeln(return42(x))
+end.
