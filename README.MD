@@ -21,7 +21,3 @@ This proved challenging as you first had to save all the used variables in the r
 # Variable initialization
 
 All variables were saved into a variable array, alongside useful information about them, such as the type. This could then be used later throughout the parsing to make sure the formatting is correct.
-
-# Final comments
-
-Even though I wasn't able to pass all test cases I knew that I came close and that I put a lot of effort into the code. I hope this is realised and that it is sufficient for a passing grade.
